@@ -10,34 +10,32 @@ Reference list:
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Enquiry — Local ZeComponents</title>
-  <meta name="description" content="Make an enquiry about our services, volunteer opportunities or sponsorship." />
+  <title>Local ZeComponents — Enquiry</title>
+  <meta name="description" content="Send your enquiry to Local ZeComponents. Connect with us for support, information or partnership." />
 
-  <!-- Connected stylesheet -->
-  <link rel="stylesheet" href="styles/main.css" />
-
-  <!-- Optional JS (deferred) -->
-  <script defer src="scripts/main.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Skip link for keyboard users -->
   <a class="visually-hidden" href="#main">Skip to main content</a>
 
-  <!-- Header / Navigation -->
   <header class="site-header" role="banner">
     <div class="container">
       <div class="brand">
-        <a href="index.html" aria-label="Local ZeComponents homepage">
-          <img src="images/image1.png" alt="Local ZeComponents logo" class="logo" />
+        <a href="homepage.html" aria-label="Local ZeComponents homepage">
+          <img src="images/image1.png" alt="Local ZeComponents logo placeholder" class="logo" />
           <span class="site-title">Local ZeComponents</span>
         </a>
       </div>
 
-      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <button id="nav-toggle" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main navigation">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="homepage.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services &amp; Products</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -46,76 +44,50 @@ Reference list:
   </header>
 
   <main id="main" role="main">
-    <section class="enquiry-hero" aria-labelledby="enquiry-title">
+    <section class="page-header" aria-labelledby="enquiry-title">
       <div class="container">
-        <h1 id="enquiry-title">Enquiry</h1>
-        <p>Please use the form below to enquire about products/services, or — if applicable — volunteering and sponsorship opportunities.</p>
+        <h1 id="enquiry-title">Send us your enquiry</h1>
+        <p class="lead">Fill out the form below and we’ll get back to you shortly.</p>
       </div>
     </section>
 
-    <section class="enquiry-form" aria-labelledby="form-title">
+    <section class="form-section" aria-labelledby="form-title">
       <div class="container">
-        <h2 id="form-title">Submit an enquiry</h2>
+        <h2 id="form-title">Enquiry form</h2>
 
-        <!-- Use server-side script instead of '#' in production (e.g. /api/enquiries) -->
-        <form id="enquiry-form" action="#" method="post" novalidate>
-          <fieldset>
-            <legend>Contact details</legend>
-
-            <label for="name">Full name</label>
-            <input id="name" name="name" type="text" required />
-
-            <label for="email">Email address</label>
-            <input id="email" name="email" type="email" required />
-
-            <label for="phone">Phone (optional)</label>
-            <input id="phone" name="phone" type="tel" />
-          </fieldset>
-
-          <fieldset>
-            <legend>Enquiry details</legend>
-
-            <label for="enquiry-type">Type of enquiry</label>
-            <select id="enquiry-type" name="enquiry_type" required>
-              <option value="">-- Choose --</option>
-              <option value="product">Product / Feature question</option>
-              <option value="service">Service / Quote request</option>
-              <option value="partnership">Partnership / Sponsorship</option>
-              <option value="volunteer">Volunteer / NPO opportunity</option>
-              <option value="other">Other</option>
-            </select>
-
-            <label for="organisation">Organisation (optional)</label>
-            <input id="organisation" name="organisation" type="text" />
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
-
-            <div class="checkboxes" aria-live="polite">
-              <p class="muted">If you represent an NPO, you may also indicate:</p>
-              <label><input type="checkbox" name="npo_interest" value="volunteer" /> Looking for volunteers</label>
-              <label><input type="checkbox" name="npo_interest" value="sponsor" /> Seeking sponsorship</label>
-            </div>
-
-            <label for="attachment">Attach file (optional)</label>
-            <input id="attachment" name="attachment" type="file" accept=".pdf,.doc,.docx,.png,.jpg" />
-          </fieldset>
-
-          <div class="form-actions">
-            <button class="btn" type="submit">Submit enquiry</button>
-            <button type="reset" class="btn-secondary">Reset</button>
+        <form action="#" method="post" class="form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required />
           </div>
 
-          <p class="notes">By submitting this form you agree to our privacy policy and that we may contact you regarding this enquiry.</p>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Submit Enquiry</button>
+            <button type="reset" class="btn-outline">Clear</button>
+          </div>
         </form>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <div class="container">
-      <p>&copy; <span id="year">2025</span> Local ZeComponents.</p>
+      <p>&copy; <span id="year">2025</span> Local ZeComponents. All rights reserved.</p>
       <nav aria-label="Footer navigation">
         <ul>
           <li><a href="about.html">About</a></li>
@@ -127,21 +99,7 @@ Reference list:
   </footer>
 
   <script>
-    // Demo: prevent real submission — replace action="#" with real endpoint in production.
-    document.getElementById('enquiry-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      // simple validation hint for demo
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      if (!name || !email) {
-        alert('Please complete the required fields: name and email.');
-        return;
-      }
-      alert('Thank you — your enquiry has been received (demo). Replace action="#" with real endpoint to enable submission.');
-    });
-
-    // Update year dynamically
-    document.getElementById('year').textContent = new Date().getFullYear();
+    (function () { var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear(); })();
   </script>
 </body>
 </html>

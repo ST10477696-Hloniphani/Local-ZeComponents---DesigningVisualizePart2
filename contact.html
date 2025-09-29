@@ -10,34 +10,32 @@ Reference list:
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact — Local ZeComponents</title>
-  <meta name="description" content="Contact Local ZeComponents — office locations, phone, email and contact form." />
+  <title>Local ZeComponents — Contact</title>
+  <meta name="description" content="Get in touch with Local ZeComponents. Find our location, send a message or connect with us directly." />
 
-  <!-- Connected stylesheet -->
-  <link rel="stylesheet" href="styles/main.css" />
-
-  <!-- Optional JS (deferred) -->
-  <script defer src="scripts/main.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Skip link for keyboard users -->
   <a class="visually-hidden" href="#main">Skip to main content</a>
 
-  <!-- Header / Navigation -->
   <header class="site-header" role="banner">
     <div class="container">
       <div class="brand">
-        <a href="index.html" aria-label="Local ZeComponents homepage">
-          <img src="images/image1.png" alt="Local ZeComponents logo" class="logo" />
+        <a href="homepage.html" aria-label="Local ZeComponents homepage">
+          <img src="images/image1.png" alt="Local ZeComponents logo placeholder" class="logo" />
           <span class="site-title">Local ZeComponents</span>
         </a>
       </div>
 
-      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <button id="nav-toggle" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main navigation">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="homepage.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services &amp; Products</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="enquiry.html">Enquiry</a></li>
           <li><a href="contact.html" aria-current="page">Contact</a></li>
         </ul>
@@ -46,106 +44,75 @@ Reference list:
   </header>
 
   <main id="main" role="main">
-    <!-- Hero -->
-    <section class="contact-hero" aria-labelledby="contact-title">
+    <section class="page-header" aria-labelledby="contact-title">
       <div class="container">
         <h1 id="contact-title">Contact Us</h1>
-        <p class="lead">Find our offices below or use the contact form to get in touch.</p>
+        <p class="lead">We’d love to hear from you. Use the form or find us on the map below.</p>
       </div>
     </section>
 
-    <!-- Locations -->
-    <section class="locations" aria-labelledby="locations-title">
-      <div class="container">
-        <h2 id="locations-title">Our Locations</h2>
-
-        <div class="locations-grid">
-          <address class="location" aria-label="Head office address">
-            <h3>Head Office</h3>
-            <p>123 Main Street<br />CityName, Province<br />Country</p>
-            <p><strong>Phone:</strong> +27 12 345 6789</p>
-            <p><strong>Email:</strong> <a href="mailto:hello@localzecomponents.example">hello@localzecomponents.example</a></p>
-          </address>
-
-          <address class="location" aria-label="Branch office address">
-            <h3>Branch Office</h3>
-            <p>456 Side Road<br />OtherCity, Province<br />Country</p>
-            <p><strong>Phone:</strong> +27 98 765 4321</p>
-            <p><strong>Email:</strong> <a href="mailto:branch@localzecomponents.example">branch@localzecomponents.example</a></p>
-          </address>
+    <section class="contact-section" aria-labelledby="contact-info-title">
+      <div class="container grid-2">
+        <div>
+          <h2 id="contact-info-title">Our Contact Information</h2>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:info@localzecomponents.com">info@localzecomponents.com</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+27000000000">+27 00 000 0000</a></li>
+            <li><strong>Address:</strong> 123 Main Street, Johannesburg, South Africa</li>
+          </ul>
         </div>
 
-        <p class="map-note muted">Map: Replace the iframe `src` with your Google Maps / OpenStreetMap embed for live maps.</p>
+        <div>
+          <h2 id="form-title">Send us a message</h2>
+          <form action="#" method="post" class="form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
 
-        <div style="margin-top:1rem;">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.929168222823!2d28.011539315027265!3d-26.030727683494448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9576aa0187cafd%3A0xe58b1322f93794bd!2sSpaces%20Design%20Quarter!5e0!3m2!1sen!2sza!4v1693227223445!5m2!1sen!2sza"
-            title="Local ZeComponents office location map"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            aria-hidden="false"
-            >
-          </iframe>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn">Send Message</button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
 
-    <!-- Contact form -->
-    <section class="contact-form-section" aria-labelledby="contactform-title">
+    <section class="map" aria-labelledby="map-title">
       <div class="container">
-        <h2 id="contactform-title">Send us a message</h2>
-
-        <form id="contact-form" action="#" method="post" novalidate>
-          <label for="full-name">Full name</label>
-          <input id="full-name" name="name" type="text" required />
-
-          <label for="email-address">Email address</label>
-          <input id="email-address" name="email" type="email" required />
-
-          <label for="subject">Subject</label>
-          <input id="subject" name="subject" type="text" required />
-
-          <label for="contact-message">Message</label>
-          <textarea id="contact-message" name="message" rows="6" required></textarea>
-
-          <div class="form-actions">
-            <button class="btn" type="submit">Send message</button>
-            <button type="reset" class="btn-secondary">Reset</button>
-          </div>
-        </form>
+        <h2 id="map-title">Find Us</h2>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.123456789!2d28.0473!3d-26.2041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDEyJzE0LjgiUyAyOMKwMDInNDAuMyJF!5e0!3m2!1sen!2sza!4v0000000000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <div class="container">
-      <p>&copy; <span id="year">2025</span> Local ZeComponents.</p>
+      <p>&copy; <span id="year">2025</span> Local ZeComponents. All rights reserved.</p>
       <nav aria-label="Footer navigation">
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services &amp; Products</a></li>
-          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
         </ul>
       </nav>
     </div>
   </footer>
 
   <script>
-    // Demo: prevent form submission and show an alert (replace action="#" in production)
-    document.getElementById('contact-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const name = document.getElementById('full-name').value.trim();
-      const email = document.getElementById('email-address').value.trim();
-      if (!name || !email) {
-        alert('Please complete the required fields: name and email.');
-        return;
-      }
-      alert('Message sent (demo). Replace action="#" with real endpoint to enable functionality.');
-    });
-
-    // Update footer year dynamically
-    document.getElementById('year').textContent = new Date().getFullYear();
+    (function () { var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear(); })();
   </script>
 </body>
 </html>

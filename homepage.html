@@ -17,11 +17,8 @@ Canva, “CV Templates” (template collection), [n.d.]. Canva [electronic ima
   <title>Local ZeComponents — Home</title>
   <meta name="description" content="Local ZeComponents — Share your CV, projects and skills. Connect with companies and collaborators." />
 
-  <!-- connect the new stylesheet (drop the stylesheet I sent into styles/main.css) -->
-  <link rel="stylesheet" href="styles/main.css" />
-
-  <!-- small script for any homepage interactions (deferred) -->
-  <script defer src="scripts/main.js"></script>
+  <!-- Styles and script (replace with your build paths if different) -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Skip link for keyboard users -->
@@ -31,17 +28,22 @@ Canva, “CV Templates” (template collection), [n.d.]. Canva [electronic ima
   <header class="site-header" role="banner">
     <div class="container">
       <div class="brand">
-        <a href="index.html" aria-label="Local ZeComponents homepage">
+        <a href="homepage.html" aria-label="Local ZeComponents homepage">
           <img src="images/image1.png" alt="Local ZeComponents logo placeholder" class="logo" />
           <span class="site-title">Local ZeComponents</span>
         </a>
       </div>
 
-      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <!-- Nav toggle for small screens -->
+      <button id="nav-toggle" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main navigation">
         <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="homepage.html" aria-current="page">Home</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services &amp; Products</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="enquiry.html">Enquiry</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -134,8 +136,8 @@ Canva, “CV Templates” (template collection), [n.d.]. Canva [electronic ima
   </footer>
 
   <script>
-    // small script to update year
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // small script to update year for non-JS fallback already handled in scripts/main.js
+    (function () { var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear(); })();
   </script>
 </body>
 </html>

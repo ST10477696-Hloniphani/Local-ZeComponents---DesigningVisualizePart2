@@ -11,34 +11,32 @@ Reference list:
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services &amp; Products — Local ZeComponents</title>
-  <meta name="description" content="Services and product offerings from Local ZeComponents, including CV tools, portfolio hosting and premium features." />
+  <title>Local ZeComponents — Services & Products</title>
+  <meta name="description" content="Discover the services and products offered by Local ZeComponents, from CV building tools to project portfolio showcases." />
 
-  <!-- Connected stylesheet -->
-  <link rel="stylesheet" href="styles/main.css" />
-
-  <!-- Optional JS (deferred) -->
-  <script defer src="scripts/main.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Skip link for keyboard users -->
   <a class="visually-hidden" href="#main">Skip to main content</a>
 
-  <!-- Header / Navigation -->
   <header class="site-header" role="banner">
     <div class="container">
       <div class="brand">
-        <a href="index.html" aria-label="Local ZeComponents homepage">
-          <img src="images/image1.png" alt="Local ZeComponents logo" class="logo" />
+        <a href="homepage.html" aria-label="Local ZeComponents homepage">
+          <img src="images/image1.png" alt="Local ZeComponents logo placeholder" class="logo" />
           <span class="site-title">Local ZeComponents</span>
         </a>
       </div>
 
-      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <button id="nav-toggle" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main navigation">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="homepage.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html" aria-current="page">Services &amp; Products</a></li>
+          <li><a href="services.html" aria-current="page">Services</a></li>
           <li><a href="enquiry.html">Enquiry</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -47,103 +45,61 @@ Reference list:
   </header>
 
   <main id="main" role="main">
-    <!-- Hero -->
-    <section class="services-hero" aria-labelledby="services-title">
+    <section class="page-header" aria-labelledby="services-title">
       <div class="container">
-        <h1 id="services-title">Services &amp; Products</h1>
-        <p class="lead">Tools and services to help individuals create professional profiles and CVs, showcase projects, and get discovered.</p>
+        <h1 id="services-title">Our Services & Products</h1>
+        <p class="lead">Everything you need to showcase your professional profile and projects.</p>
       </div>
     </section>
 
-    <!-- Offerings -->
-    <section class="product-offerings" aria-labelledby="offerings-title">
+    <section class="services" aria-labelledby="offerings-title">
       <div class="container">
         <h2 id="offerings-title">What we offer</h2>
 
-        <div class="card-grid service-list" aria-live="polite">
-          <article class="service" aria-labelledby="svc1">
-            <h3 id="svc1">Profile Builder</h3>
-            <p>Fill in name, headline, summary, skills and experience. Export a downloadable, printer-friendly CV (PDF).</p>
-            <ul>
-              <li>Step-by-step fields</li>
-              <li>Pre-formatted PDF export</li>
-              <li>Privacy controls</li>
-            </ul>
-            <a class="card-link" href="services.html#profile-builder">Learn more</a>
-          </article>
-
-          <article class="service" aria-labelledby="svc2">
-            <h3 id="svc2">Portfolio Hosting</h3>
-            <p>Upload project images, attach live links and GitHub repos. Create case studies with screenshots and outcomes.</p>
-            <ul>
-              <li>Image galleries with captions</li>
-              <li>Project metadata for search</li>
-              <li>Links to live demos or repos</li>
-            </ul>
-            <a class="card-link" href="services.html#portfolio-hosting">Learn more</a>
-          </article>
-
-          <article class="service" aria-labelledby="svc3">
-            <h3 id="svc3">Skill Search &amp; Match</h3>
-            <p>Employers can search for skill tags and filter by location or availability.</p>
-            <ul>
-              <li>Advanced tag-based search</li>
-              <li>Location and availability filters</li>
-            </ul>
-            <a class="card-link" href="services.html#skill-search">Learn more</a>
-          </article>
-        </div>
-
-        <!-- CTA -->
-        <div class="product-cta" style="margin-top:1.25rem;">
-          <h3>Premium Product (Optional)</h3>
-          <p>For organisations: branded profile pages, priority search placement, and recruitment packages.</p>
-          <a class="btn" href="enquiry.html">Request a quote</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Technical & UX notes -->
-    <section class="specs" aria-labelledby="specs-title">
-      <div class="container">
-        <h2 id="specs-title">Technical &amp; UX notes</h2>
-        <p>All images are responsive and use <code>srcset</code> to serve appropriate sizes; documents are stored as accessible PDFs; forms include client-side and server-side validation.</p>
-
-        <div class="profile-builder-example" style="margin-top:1rem;">
-          <h3>Profile Builder (example form)</h3>
-          <form id="profile-builder" action="#" method="post" enctype="multipart/form-data" novalidate>
-            <label for="fullname">Full name</label>
-            <input id="fullname" name="fullname" type="text" required />
-
-            <label for="headline">Headline</label>
-            <input id="headline" name="headline" type="text" placeholder="e.g. Front-end Developer | React" />
-
-            <label for="bio">Short bio</label>
-            <textarea id="bio" name="bio" rows="4"></textarea>
-
-            <label for="skills">Skills (comma separated)</label>
-            <input id="skills" name="skills" type="text" placeholder="JavaScript, React, UI Design" />
-
-            <label for="cv-upload">Upload CV (PDF)</label>
-            <input id="cv-upload" name="cv" type="file" accept="application/pdf" />
-
-            <div style="margin-top:0.75rem;">
-              <button class="btn" type="submit">Save profile (demo)</button>
+        <div class="card-grid">
+          <article class="card" aria-labelledby="cv-builder-title">
+            <img src="images/image2.png" alt="Illustration of CV building" />
+            <div class="card-content">
+              <h3 id="cv-builder-title">CV Builder</h3>
+              <p>Create professional CVs online and export them as PDFs in seconds.</p>
             </div>
-          </form>
+          </article>
+
+          <article class="card" aria-labelledby="portfolio-title">
+            <img src="images/image3.png" alt="Illustration of portfolio showcase" />
+            <div class="card-content">
+              <h3 id="portfolio-title">Portfolio Showcase</h3>
+              <p>Upload and present your projects visually with screenshots, links, and write-ups.</p>
+            </div>
+          </article>
+
+          <article class="card" aria-labelledby="skills-title">
+            <img src="images/image4.jpg" alt="Illustration of searchable skills" />
+            <div class="card-content">
+              <h3 id="skills-title">Searchable Skills</h3>
+              <p>Tag your skills so companies and collaborators can find you easily.</p>
+            </div>
+          </article>
+
+          <article class="card" aria-labelledby="privacy-title">
+            <img src="images/image5.jpg" alt="Illustration of privacy controls" />
+            <div class="card-content">
+              <h3 id="privacy-title">Privacy Controls</h3>
+              <p>Decide what to share publicly and what to keep private with flexible privacy settings.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <div class="container">
-      <p>&copy; <span id="year">2025</span> Local ZeComponents.</p>
+      <p>&copy; <span id="year">2025</span> Local ZeComponents. All rights reserved.</p>
       <nav aria-label="Footer navigation">
         <ul>
           <li><a href="about.html">About</a></li>
-          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="services.html" aria-current="page">Services &amp; Products</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -151,17 +107,7 @@ Reference list:
   </footer>
 
   <script>
-    // Demo: prevent real submission for example form
-    const profileForm = document.getElementById('profile-builder');
-    if (profileForm) {
-      profileForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        alert('Profile save (demo). Replace action="#" with backend endpoint to enable saving.');
-      });
-    }
-
-    // Update year dynamically
-    document.getElementById('year').textContent = new Date().getFullYear();
+    (function () { var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear(); })();
   </script>
 </body>
 </html>
