@@ -96,3 +96,21 @@ DhiWise, “Exploring the Significance of Semantic HTML Elements” (web develop
 
 Digital Silk, “The 7-Step Website Development Process” (web development guide), 30 June 2025. Digital Silk [online]. Available at: https://www.digitalsilk.com/digital-trends/website-development-process/#:~:text=,both%20desktop%20and%20mobile%20versions 
 [Accessed 27 August 2025] 
+
+W3Schools, “Responsive Web Design Viewport” (CSS tutorial), 2025. W3Schools [online]. Available at: https://www.w3schools.com/css/css_rwd_viewport.asp
+[Accessed 22 September 2025].
+
+Bootstrap, “Visually Hidden” (accessibility utility), 2025. Bootstrap [online]. Available at: https://getbootstrap.com/docs/5.0/helpers/visually-hidden/
+[Accessed 22 September 2025].
+
+W3Schools, “HTML Images” (HTML tutorial), 2025. W3Schools [online]. Available at: https://www.w3schools.com/html/html_images.asp
+[Accessed 24 September 2025].
+
+freeCodeCamp, “You Should Have a Label Element with an ID of Name-Label” (forum discussion), 2025. freeCodeCamp [online]. Available at: https://forum.freecodecamp.org/t/you-should-have-a-label-element-with-an-id-of-name-label/648921
+[Accessed 24 September 2025].
+
+Stack Overflow, “Get the Current Year in JavaScript” (forum discussion), 2025. Stack Overflow [online]. Available at: https://stackoverflow.com/questions/6002254/get-the-current-year-in-javascript
+[Accessed 24 September 2025].
+
+SheCodes, “[HTML] - How to Add a Link to My Button in HTML” (tutorial), 2025. SheCodes [online]. Available at: https://www.shecodes.io/athena/17038-how-to-add-a-link-to-my-button-in-html
+[Accessed 29 September 2025].
