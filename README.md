@@ -2,7 +2,7 @@ Local ZeComponents
 
 Name & Surname: Hloniphani Dube Mlambo
 Student Number: St10477696
-GitHub Repository link: https://github.com/ST10477696-Hloniphani/Local-ZeComponents---IntroductionPart1/tree/main
+GitHub Repository link: https://github.com/ST10477696-Hloniphani/Local-ZeComponents---DesigningVisualizePart2/tree/main
 
 1. Project Overview
 
