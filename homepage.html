@@ -9,17 +9,24 @@ Canva, “CV Templates” (template collection), [n.d.]. Canva [electronic ima
 -->
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Local ZeComponents — Home</title>
   <meta name="description" content="Local ZeComponents — Share your CV, projects and skills. Connect with companies and collaborators." />
+
+  <!-- connect the new stylesheet (drop the stylesheet I sent into styles/main.css) -->
   <link rel="stylesheet" href="styles/main.css" />
+
+  <!-- small script for any homepage interactions (deferred) -->
   <script defer src="scripts/main.js"></script>
 </head>
 <body>
+  <!-- Skip link for keyboard users -->
+  <a class="visually-hidden" href="#main">Skip to main content</a>
+
   <!-- Header / Navigation -->
   <header class="site-header" role="banner">
     <div class="container">
@@ -29,11 +36,12 @@ Canva, “CV Templates” (template collection), [n.d.]. Canva [electronic ima
           <span class="site-title">Local ZeComponents</span>
         </a>
       </div>
+
       <nav class="main-nav" role="navigation" aria-label="Main navigation">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services & Products</a></li>
+          <li><a href="services.html">Services &amp; Products</a></li>
           <li><a href="enquiry.html">Enquiry</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -47,6 +55,7 @@ Canva, “CV Templates” (template collection), [n.d.]. Canva [electronic ima
       <div class="container">
         <h1 id="hero-title">Showcase your CV, projects and skills</h1>
         <p class="lead">Create a public CV, share project portfolios, and get discovered by local employers and collaborators.</p>
+
         <p>
           <a class="btn" href="services.html">Get Started</a>
           <a class="btn-outline" href="profiles.html">Explore Profiles</a>
@@ -76,15 +85,15 @@ Canva, “CV Templates” (template collection), [n.d.]. Canva [electronic ima
           <article class="profile-card" aria-labelledby="p1-name">
             <img src="images/image3.png" alt="Profile photo John Doe" />
             <div class="card-content">
-              <p class="muted">Place your face to the world Now!</p>
+              <h3 id="p1-name">John Doe</h3>
+              <p class="muted">Place your face to the world now!</p>
               <p>Creates accessible profiles, and promote your skills here.</p>
               <a class="card-link" href="#">View profile</a>
             </div>
           </article>
 
           <article class="profile-card" aria-labelledby="p2-name">
-            <img src="images/image2.png" alt="Profile photo Jane Smith" 
-            style="width: 200px; height: auto;"/>
+            <img src="images/image2.png" alt="Profile photo Jane Smith" />
             <div class="card-content">
               <h3 id="p2-name">Jane Smith</h3>
               <p class="muted">Graphic Designer — Adobe CC, Figma</p>
@@ -117,7 +126,7 @@ Canva, “CV Templates” (template collection), [n.d.]. Canva [electronic ima
       <nav aria-label="Footer navigation">
         <ul>
           <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services & Products</a></li>
+          <li><a href="services.html">Services &amp; Products</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
