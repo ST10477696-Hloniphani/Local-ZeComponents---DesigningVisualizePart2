@@ -1,0 +1,128 @@
+<!--
+Reference list:
+99designs, “Zebra Logos” (logo inspiration collection), [n.d.]. 99designs [electronic image collection]. Available at: https://99designs.com/inspiration/logos/zebra
+ [Accessed 25 August 2025].
+
+Unsplash, “Team” (photography collection), [n.d.]. Unsplash [electronic image collection]. Available at: https://unsplash.com/s/photos/team
+ [Accessed 26 August 2025].
+
+ Pinterest, “Team Work Pictures” (idea board), [n.d.]. Pinterest [electronic image collection]. Available at: https://za.pinterest.com/ideas/team-work-pictures/908127687733/
+ [Accessed 26 August 2025].
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata and head content -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Us — Local ZeComponents</title>
+  <meta name="description" content="About Local ZeComponents — mission, vision and team." />
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <!-- Site Header with branding and navigation -->
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <!-- Logo and site name linking back to homepage -->
+        <a href="index.html">
+          <img src="images/image1.png" alt="Site logo" />
+          <span>Local ZeComponents</span>
+        </a>
+      </div>
+      <!-- Main navigation menu -->
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About Us</a></li>
+          <li><a href="services.html">Services & Products</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content area -->
+  <main role="main">
+    <!-- Hero section introducing the About page -->
+    <section class="about-hero" aria-labelledby="about-title">
+      <div class="container">
+        <h1 id="about-title">About Local ZeComponents</h1>
+        <img src="images/image2.jpg" alt="Team working together" />
+        <p>Local ZeComponents is a community-focused platform where individuals and small teams create and share professional CVs, project portfolios, and hobby showcases to attract local employers, collaborators and clients.</p>
+      </div>
+    </section>
+
+    <!-- Mission statement section -->
+    <section class="mission" aria-labelledby="mission-title">
+      <div class="container">
+        <h2 id="mission-title">Our Mission</h2>
+        <p>To empower local talent by providing an easy-to-use platform to present professional achievements, practical skills, and personal projects in a discoverable way.</p>
+      </div>
+    </section>
+
+    <!-- Vision and values section -->
+    <section class="vision-values" aria-labelledby="vision-title">
+      <div class="container">
+        <h2 id="vision-title">Vision & Values</h2>
+        <ul>
+          <li><strong>Transparency:</strong> Users control what they publish.</li>
+          <li><strong>Accessibility:</strong> Profiles must be readable and usable on any device.</li>
+          <li><strong>Community:</strong> Promote collaboration and local hiring opportunities.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Team members section -->
+    <section class="team" aria-labelledby="team-title">
+      <div class="container">
+        <h2 id="team-title">Meet the Team</h2>
+        <div class="card-grid">
+          <!-- Team member 1 -->
+          <article class="team-member" aria-labelledby="member1">
+            <img src="images/image.webp" alt="Team member photo" />
+            <h3 id="member1">A. Developer</h3>
+            <p>Lead developer — builds core features and manages deployment.</p>
+          </article>
+          <!-- Team member 2 -->
+          <article class="team-member" aria-labelledby="member2">
+            <img src="images/image6.webp" alt="Team member photo" />
+            <h3 id="member2">B. Designer</h3>
+            <p>Product designer — crafts UI and user flows for the platform.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project timeline section -->
+    <section class="history" aria-labelledby="history-title">
+      <div class="container">
+        <h2 id="history-title">Project Timeline</h2>
+        <ul class="timeline">
+          <li><strong>Phase 1 — Foundation:</strong> Planning, HTML skeleton, content collection.</li>
+          <li><strong>Phase 2 — Style:</strong> CSS, responsive design, branding.</li>
+          <li><strong>Phase 3 — Functionality:</strong> JavaScript features, file uploads, forms.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- Display current year dynamically -->
+      <p>&copy; <span id="year">2025</span> Local ZeComponents.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript to dynamically update year -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

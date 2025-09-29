@@ -1,0 +1,116 @@
+<!--
+Reference list:
+99designs, “Zebra Logos” (logo inspiration collection), [n.d.]. 99designs [electronic image collection]. Available at: https://99designs.com/inspiration/logos/zebra
+ [Accessed 25 August 2025].
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Enquiry — Local ZeComponents</title>
+  <meta name="description" content="Make an enquiry about our services, volunteer opportunities or sponsorship." />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand"><a href="index.html"><img src="images/image1.png" alt="Logo" /><span>Local ZeComponents</span></a></div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services & Products</a></li>
+          <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main">
+    <section class="enquiry-hero" aria-labelledby="enquiry-title">
+      <div class="container">
+        <h1 id="enquiry-title">Enquiry</h1>
+        <p>Please use the form below to enquire about products/services, or — if applicable — volunteering and sponsorship opportunities.</p>
+      </div>
+    </section>
+
+    <section class="enquiry-form" aria-labelledby="form-title">
+      <div class="container">
+        <h2 id="form-title">Submit an enquiry</h2>
+
+        <!-- Use server-side script instead of '#' in production (e.g. /api/enquiries) -->
+        <form id="enquiry-form" action="#" method="post" novalidate>
+          <fieldset>
+            <legend>Contact details</legend>
+
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required />
+
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" required />
+
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" name="phone" type="tel" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Enquiry details</legend>
+
+            <label for="enquiry-type">Type of enquiry</label>
+            <select id="enquiry-type" name="enquiry_type" required>
+              <option value="">-- Choose --</option>
+              <option value="product">Product / Feature question</option>
+              <option value="service">Service / Quote request</option>
+              <option value="partnership">Partnership / Sponsorship</option>
+              <option value="volunteer">Volunteer / NPO opportunity</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="organisation">Organisation (optional)</label>
+            <input id="organisation" name="organisation" type="text" />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <div class="checkboxes">
+              <p>If you represent an NPO, you may also indicate:</p>
+              <label><input type="checkbox" name="npo_interest" value="volunteer" /> Looking for volunteers</label>
+              <label><input type="checkbox" name="npo_interest" value="sponsor" /> Seeking sponsorship</label>
+            </div>
+
+            <label for="attachment">Attach file (optional)</label>
+            <input id="attachment" name="attachment" type="file" accept=".pdf,.doc,.docx,.png,.jpg" />
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit">Submit enquiry</button>
+            <button type="reset" class="btn-secondary">Reset</button>
+          </div>
+
+          <p class="notes">By submitting this form you agree to our privacy policy and that we may contact you regarding this enquiry.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year">2025</span> Local ZeComponents.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Basic front-end validation example (demo only)
+    document.getElementById('enquiry-form').addEventListener('submit', function (e) {
+      // Prevent real submit in prototype
+      e.preventDefault();
+      alert('Thank you — your enquiry has been received (demo). Replace action="#" with real endpoint to enable submission.');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!--
+Reference list:
+99designs, “Zebra Logos” (logo inspiration collection), [n.d.]. 99designs [electronic image collection]. Available at: https://99designs.com/inspiration/logos/zebra
+ [Accessed 25 August 2025].
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta and page settings -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services & Products — Local ZeComponents</title>
+  <meta name="description" content="Services and product offerings from Local ZeComponents, including CV tools, portfolio hosting and premium features." />
+  
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <!-- Site header with logo and navigation -->
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <!-- Logo and brand name linking back to homepage -->
+        <a href="index.html">
+          <img src="images/image1.png" alt="Logo" />
+          <span>Local ZeComponents</span>
+        </a>
+      </div>
+      <!-- Main navigation menu -->
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html" aria-current="page">Services & Products</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content area -->
+  <main role="main">
+    <!-- Intro section for services page -->
+    <section class="services-hero" aria-labelledby="services-title">
+      <div class="container">
+        <h1 id="services-title">Services & Products</h1>
+        <p>We provide tools and services to help individuals create professional profiles and CVs, showcase projects, and get discovered.</p>
+      </div>
+    </section>
+
+    <!-- Section listing available services and products -->
+    <section class="product-offerings" aria-labelledby="offerings-title">
+      <div class="container">
+        <h2 id="offerings-title">What we offer</h2>
+
+        <div class="service-list">
+          <!-- Individual service offering -->
+          <article class="service">
+            <h3>Profile Builder</h3>
+            <p>Fill in name, headline, summary, skills and experience. Export a downloadable, printer-friendly CV (PDF).</p>
+            <ul>
+              <li>Step-by-step fields</li>
+              <li>Pre-formatted PDF export</li>
+              <li>Privacy controls</li>
+            </ul>
+          </article>
+
+          <!-- Another service -->
+          <article class="service">
+            <h3>Portfolio Hosting</h3>
+            <p>Upload project images, attach live links and GitHub repos. Create case studies with screenshots and outcomes.</p>
+            <ul>
+              <li>Image galleries with captions</li>
+              <li>Project metadata for search</li>
+              <li>Links to live demos or repos</li>
+            </ul>
+          </article>
+
+          <!-- Another service -->
+          <article class="service">
+            <h3>Skill Search & Match</h3>
+            <p>Employers can search for skill tags and filter by location or availability.</p>
+            <ul>
+              <li>Advanced tag-based search</li>
+              <li>Location and availability filters</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Call to action for premium services -->
+        <div class="product-cta">
+          <h3>Premium Product (Optional)</h3>
+          <p>For organisations: branded profile pages, priority search placement, and recruitment packages.</p>
+          <a class="btn" href="enquiry.html">Request a quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical and UX information section -->
+    <section class="specs" aria-labelledby="specs-title">
+      <div class="container">
+        <h2 id="specs-title">Technical & UX notes</h2>
+        <p>All images are responsive and use <code>srcset</code> to serve appropriate sizes; documents are stored as accessible PDFs; forms include client-side and server-side validation.</p>
+
+        <!-- Prototype example form -->
+        <div class="profile-builder-example">
+          <h3>Profile Builder (example form)</h3>
+          <form id="profile-builder" action="#" method="post" enctype="multipart/form-data" novalidate>
+            <!-- Input for full name -->
+            <label for="fullname">Full name</label>
+            <input id="fullname" name="fullname" type="text" required />
+
+            <!-- Input for headline -->
+            <label for="headline">Headline</label>
+            <input id="headline" name="headline" type="text" placeholder="e.g. Front-end Developer | React" />
+
+            <!-- Textarea for short bio -->
+            <label for="bio">Short bio</label>
+            <textarea id="bio" name="bio" rows="4"></textarea>
+
+            <!-- Input for skills -->
+            <label for="skills">Skills (comma separated)</label>
+            <input id="skills" name="skills" type="text" placeholder="JavaScript, React, UI Design" />
+
+            <!-- File upload for CV -->
+            <label for="cv-upload">Upload CV (PDF)</label>
+            <input id="cv-upload" name="cv" type="file" accept="application/pdf" />
+
+            <!-- Submit button -->
+            <button type="submit">Save profile (demo)</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer with current year -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year">2025</span> Local ZeComponents.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript to set current year dynamically -->
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
