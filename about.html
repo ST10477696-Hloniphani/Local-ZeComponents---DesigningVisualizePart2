@@ -12,34 +12,39 @@ Unsplash, “Team” (photography collection), [n.d.]. Unsplash [electronic im
 -->
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <!-- Metadata and head content -->
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us — Local ZeComponents</title>
   <meta name="description" content="About Local ZeComponents — mission, vision and team." />
-  <!-- Link to external CSS -->
+
+  <!-- Connected stylesheet -->
   <link rel="stylesheet" href="styles/main.css" />
+
+  <!-- Optional JS (deferred) -->
+  <script defer src="scripts/main.js"></script>
 </head>
 <body>
-  <!-- Site Header with branding and navigation -->
-  <header class="site-header">
+  <!-- Skip link for keyboard users -->
+  <a class="visually-hidden" href="#main">Skip to main content</a>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" role="banner">
     <div class="container">
       <div class="brand">
-        <!-- Logo and site name linking back to homepage -->
-        <a href="index.html">
-          <img src="images/image1.png" alt="Site logo" />
-          <span>Local ZeComponents</span>
+        <a href="index.html" aria-label="Local ZeComponents homepage">
+          <img src="images/image1.png" alt="Local ZeComponents logo" class="logo" />
+          <span class="site-title">Local ZeComponents</span>
         </a>
       </div>
-      <!-- Main navigation menu -->
-      <nav class="main-nav" aria-label="Main navigation">
+
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html" aria-current="page">About Us</a></li>
-          <li><a href="services.html">Services & Products</a></li>
+          <li><a href="services.html">Services &amp; Products</a></li>
           <li><a href="enquiry.html">Enquiry</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -47,18 +52,17 @@ Unsplash, “Team” (photography collection), [n.d.]. Unsplash [electronic im
     </div>
   </header>
 
-  <!-- Main content area -->
-  <main role="main">
-    <!-- Hero section introducing the About page -->
+  <main id="main" role="main">
+    <!-- About hero -->
     <section class="about-hero" aria-labelledby="about-title">
       <div class="container">
         <h1 id="about-title">About Local ZeComponents</h1>
-        <img src="images/image2.jpg" alt="Team working together" />
-        <p>Local ZeComponents is a community-focused platform where individuals and small teams create and share professional CVs, project portfolios, and hobby showcases to attract local employers, collaborators and clients.</p>
+        <img src="images/image2.jpg" alt="Team working together" style="max-width:420px; margin-top:1rem; border-radius:8px;" />
+        <p class="lead" style="margin-top:1rem;">Local ZeComponents is a community-focused platform where individuals and small teams create and share professional CVs, project portfolios, and hobby showcases to attract local employers, collaborators and clients.</p>
       </div>
     </section>
 
-    <!-- Mission statement section -->
+    <!-- Mission -->
     <section class="mission" aria-labelledby="mission-title">
       <div class="container">
         <h2 id="mission-title">Our Mission</h2>
@@ -66,10 +70,10 @@ Unsplash, “Team” (photography collection), [n.d.]. Unsplash [electronic im
       </div>
     </section>
 
-    <!-- Vision and values section -->
+    <!-- Vision & values -->
     <section class="vision-values" aria-labelledby="vision-title">
       <div class="container">
-        <h2 id="vision-title">Vision & Values</h2>
+        <h2 id="vision-title">Vision &amp; Values</h2>
         <ul>
           <li><strong>Transparency:</strong> Users control what they publish.</li>
           <li><strong>Accessibility:</strong> Profiles must be readable and usable on any device.</li>
@@ -78,28 +82,31 @@ Unsplash, “Team” (photography collection), [n.d.]. Unsplash [electronic im
       </div>
     </section>
 
-    <!-- Team members section -->
+    <!-- Team -->
     <section class="team" aria-labelledby="team-title">
       <div class="container">
         <h2 id="team-title">Meet the Team</h2>
         <div class="card-grid">
-          <!-- Team member 1 -->
           <article class="team-member" aria-labelledby="member1">
             <img src="images/image.webp" alt="Team member photo" />
-            <h3 id="member1">A. Developer</h3>
-            <p>Lead developer — builds core features and manages deployment.</p>
+            <div class="card-content">
+              <h3 id="member1">A. Developer</h3>
+              <p>Lead developer — builds core features and manages deployment.</p>
+            </div>
           </article>
-          <!-- Team member 2 -->
+
           <article class="team-member" aria-labelledby="member2">
             <img src="images/image6.webp" alt="Team member photo" />
-            <h3 id="member2">B. Designer</h3>
-            <p>Product designer — crafts UI and user flows for the platform.</p>
+            <div class="card-content">
+              <h3 id="member2">B. Designer</h3>
+              <p>Product designer — crafts UI and user flows for the platform.</p>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Project timeline section -->
+    <!-- Timeline / history -->
     <section class="history" aria-labelledby="history-title">
       <div class="container">
         <h2 id="history-title">Project Timeline</h2>
@@ -112,16 +119,22 @@ Unsplash, “Team” (photography collection), [n.d.]. Unsplash [electronic im
     </section>
   </main>
 
-  <!-- Site footer -->
-  <footer class="site-footer">
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
-      <!-- Display current year dynamically -->
       <p>&copy; <span id="year">2025</span> Local ZeComponents.</p>
+      <nav aria-label="Footer navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services &amp; Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 
-  <!-- JavaScript to dynamically update year -->
   <script>
+    // Update footer year dynamically
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
