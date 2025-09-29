@@ -6,35 +6,39 @@ Reference list:
 -->
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <!-- Meta and page settings -->
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Services & Products — Local ZeComponents</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services &amp; Products — Local ZeComponents</title>
   <meta name="description" content="Services and product offerings from Local ZeComponents, including CV tools, portfolio hosting and premium features." />
-  
-  <!-- Link to external stylesheet -->
+
+  <!-- Connected stylesheet -->
   <link rel="stylesheet" href="styles/main.css" />
+
+  <!-- Optional JS (deferred) -->
+  <script defer src="scripts/main.js"></script>
 </head>
 <body>
-  <!-- Site header with logo and navigation -->
-  <header class="site-header">
+  <!-- Skip link for keyboard users -->
+  <a class="visually-hidden" href="#main">Skip to main content</a>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" role="banner">
     <div class="container">
       <div class="brand">
-        <!-- Logo and brand name linking back to homepage -->
-        <a href="index.html">
-          <img src="images/image1.png" alt="Logo" />
-          <span>Local ZeComponents</span>
+        <a href="index.html" aria-label="Local ZeComponents homepage">
+          <img src="images/image1.png" alt="Local ZeComponents logo" class="logo" />
+          <span class="site-title">Local ZeComponents</span>
         </a>
       </div>
-      <!-- Main navigation menu -->
-      <nav aria-label="Main navigation">
+
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html" aria-current="page">Services & Products</a></li>
+          <li><a href="services.html" aria-current="page">Services &amp; Products</a></li>
           <li><a href="enquiry.html">Enquiry</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -42,57 +46,56 @@ Reference list:
     </div>
   </header>
 
-  <!-- Main content area -->
-  <main role="main">
-    <!-- Intro section for services page -->
+  <main id="main" role="main">
+    <!-- Hero -->
     <section class="services-hero" aria-labelledby="services-title">
       <div class="container">
-        <h1 id="services-title">Services & Products</h1>
-        <p>We provide tools and services to help individuals create professional profiles and CVs, showcase projects, and get discovered.</p>
+        <h1 id="services-title">Services &amp; Products</h1>
+        <p class="lead">Tools and services to help individuals create professional profiles and CVs, showcase projects, and get discovered.</p>
       </div>
     </section>
 
-    <!-- Section listing available services and products -->
+    <!-- Offerings -->
     <section class="product-offerings" aria-labelledby="offerings-title">
       <div class="container">
         <h2 id="offerings-title">What we offer</h2>
 
-        <div class="service-list">
-          <!-- Individual service offering -->
-          <article class="service">
-            <h3>Profile Builder</h3>
+        <div class="card-grid service-list" aria-live="polite">
+          <article class="service" aria-labelledby="svc1">
+            <h3 id="svc1">Profile Builder</h3>
             <p>Fill in name, headline, summary, skills and experience. Export a downloadable, printer-friendly CV (PDF).</p>
             <ul>
               <li>Step-by-step fields</li>
               <li>Pre-formatted PDF export</li>
               <li>Privacy controls</li>
             </ul>
+            <a class="card-link" href="services.html#profile-builder">Learn more</a>
           </article>
 
-          <!-- Another service -->
-          <article class="service">
-            <h3>Portfolio Hosting</h3>
+          <article class="service" aria-labelledby="svc2">
+            <h3 id="svc2">Portfolio Hosting</h3>
             <p>Upload project images, attach live links and GitHub repos. Create case studies with screenshots and outcomes.</p>
             <ul>
               <li>Image galleries with captions</li>
               <li>Project metadata for search</li>
               <li>Links to live demos or repos</li>
             </ul>
+            <a class="card-link" href="services.html#portfolio-hosting">Learn more</a>
           </article>
 
-          <!-- Another service -->
-          <article class="service">
-            <h3>Skill Search & Match</h3>
+          <article class="service" aria-labelledby="svc3">
+            <h3 id="svc3">Skill Search &amp; Match</h3>
             <p>Employers can search for skill tags and filter by location or availability.</p>
             <ul>
               <li>Advanced tag-based search</li>
               <li>Location and availability filters</li>
             </ul>
+            <a class="card-link" href="services.html#skill-search">Learn more</a>
           </article>
         </div>
 
-        <!-- Call to action for premium services -->
-        <div class="product-cta">
+        <!-- CTA -->
+        <div class="product-cta" style="margin-top:1.25rem;">
           <h3>Premium Product (Optional)</h3>
           <p>For organisations: branded profile pages, priority search placement, and recruitment packages.</p>
           <a class="btn" href="enquiry.html">Request a quote</a>
@@ -100,52 +103,65 @@ Reference list:
       </div>
     </section>
 
-    <!-- Technical and UX information section -->
+    <!-- Technical & UX notes -->
     <section class="specs" aria-labelledby="specs-title">
       <div class="container">
-        <h2 id="specs-title">Technical & UX notes</h2>
+        <h2 id="specs-title">Technical &amp; UX notes</h2>
         <p>All images are responsive and use <code>srcset</code> to serve appropriate sizes; documents are stored as accessible PDFs; forms include client-side and server-side validation.</p>
 
-        <!-- Prototype example form -->
-        <div class="profile-builder-example">
+        <div class="profile-builder-example" style="margin-top:1rem;">
           <h3>Profile Builder (example form)</h3>
           <form id="profile-builder" action="#" method="post" enctype="multipart/form-data" novalidate>
-            <!-- Input for full name -->
             <label for="fullname">Full name</label>
             <input id="fullname" name="fullname" type="text" required />
 
-            <!-- Input for headline -->
             <label for="headline">Headline</label>
             <input id="headline" name="headline" type="text" placeholder="e.g. Front-end Developer | React" />
 
-            <!-- Textarea for short bio -->
             <label for="bio">Short bio</label>
             <textarea id="bio" name="bio" rows="4"></textarea>
 
-            <!-- Input for skills -->
             <label for="skills">Skills (comma separated)</label>
             <input id="skills" name="skills" type="text" placeholder="JavaScript, React, UI Design" />
 
-            <!-- File upload for CV -->
             <label for="cv-upload">Upload CV (PDF)</label>
             <input id="cv-upload" name="cv" type="file" accept="application/pdf" />
 
-            <!-- Submit button -->
-            <button type="submit">Save profile (demo)</button>
+            <div style="margin-top:0.75rem;">
+              <button class="btn" type="submit">Save profile (demo)</button>
+            </div>
           </form>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer with current year -->
-  <footer class="site-footer">
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <p>&copy; <span id="year">2025</span> Local ZeComponents.</p>
+      <nav aria-label="Footer navigation">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 
-  <!-- JavaScript to set current year dynamically -->
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    // Demo: prevent real submission for example form
+    const profileForm = document.getElementById('profile-builder');
+    if (profileForm) {
+      profileForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Profile save (demo). Replace action="#" with backend endpoint to enable saving.');
+      });
+    }
+
+    // Update year dynamically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
